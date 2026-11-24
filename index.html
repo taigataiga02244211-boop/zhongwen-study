@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="中国語の文章を入力して、日本語訳・例文・単語解説を確認できる学習サイト">
+  <title>中文スタディ｜中国語学習</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#" aria-label="中文スタディ ホーム">
+      <span class="brand-mark">文</span>
+      <span>中文スタディ</span>
+    </a>
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a class="nav-link active" href="#">学習</a>
+      <a class="nav-link" href="#history">履歴</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">CHINESE READER</p>
+      <h1>文章から、学びを広げよう。</h1>
+      <p class="subtitle">中国語の文章を貼って、意味や使い方を確認できます。</p>
+    </section>
+
+    <section class="workspace" aria-label="文章解析">
+      <div class="input-card">
+        <label for="sourceText">中国語の文章</label>
+        <div class="textarea-wrap">
+          <textarea id="sourceText" rows="7" placeholder="ここに中国語の文章を入力してください…">我想学好中文。</textarea>
+          <span id="charCount" class="char-count">0文字</span>
+        </div>
+        <div class="actions">
+          <button id="clearButton" class="button button-ghost" type="button">クリア</button>
+          <button id="analyzeButton" class="button button-primary" type="button">
+            <span>解析する</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="result" class="result" aria-live="polite">
+        <article class="result-card translation-card">
+          <div class="card-heading">
+            <span class="step">01</span>
+            <h2>日本語訳</h2>
+          </div>
+          <p id="translation" class="translation">私は中国語を上手に勉強したいです。</p>
+        </article>
+
+        <article class="result-card">
+          <div class="card-heading">
+            <span class="step">02</span>
+            <h2>例文</h2>
+          </div>
+          <div id="examples" class="examples">
+            <div class="example">
+              <p class="chinese">我每天都学中文。</p>
+              <p class="pinyin">Wǒ měitiān dōu xué Zhōngwén.</p>
+              <p class="japanese">私は毎日中国語を勉強します。</p>
+            </div>
+            <div class="example">
+              <p class="chinese">学好中文需要坚持练习。</p>
+              <p class="pinyin">Xué hǎo Zhōngwén xūyào jiānchí liànxí.</p>
+              <p class="japanese">中国語を上達させるには継続して練習する必要があります。</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="result-card">
+          <div class="card-heading">
+            <span class="step">03</span>
+            <h2>単語・解説</h2>
+          </div>
+          <div id="words" class="word-list">
+            <div class="word"><span class="word-character">我</span><span class="word-reading">Wǒ</span><span class="word-meaning">私・私の</span></div>
+            <div class="word"><span class="word-character">想</span><span class="word-reading">Xiǎng</span><span class="word-meaning">したい／思う</span></div>
+            <div class="word"><span class="word-character">学好</span><span class="word-reading">Xué hǎo</span><span class="word-meaning">上手に学ぶ／習得する</span></div>
+            <div class="word"><span class="word-character">中文</span><span class="word-reading">Zhōngwén</span><span class="word-meaning">中国語</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 中文スタディ</footer>
+  <script src="script.js"></script>
+</body>
+</html>
